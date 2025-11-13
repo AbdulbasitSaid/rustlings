@@ -10,10 +10,20 @@
 
 // TODO: Write a function that calculates the price of an order of apples given
 // the quantity bought.
-// fn calculate_price_of_apples(???) -> ??? { ??? }
+fn calculate_price_of_apples(amount: i32) -> i32 {
+    const DISCOUNT_RATE: i32 = 40;
+    let price: i32 = if amount > DISCOUNT_RATE {
+        amount
+    } else {
+        amount * 2
+    };
+    price
+}
 
 fn main() {
     // You can optionally experiment here.
+    let result = calculate_price_of_apples(35);
+    println!("Price: {}", result);
 }
 
 // Don't change the tests!
